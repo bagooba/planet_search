@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-python==3.9 
+python==3.12
 pip==25.1.1
 astropy==7.1.0
 batman_package==2.5.3
