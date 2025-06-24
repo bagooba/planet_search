@@ -23,3 +23,4 @@ ipython
 ipywidgets
 numpy
 pandas
+matplotlib
