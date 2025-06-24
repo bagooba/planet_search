@@ -207,7 +207,7 @@ def take_lc_print_phase_space(time, flux, t0_val, period):
 
 def finding_all_transits_gui(time, flux):
 
-    print('Now lets try to find the transits! This time, you can type in what you think is the time of the transit, an then try to find the period by matching the other red llines to other transits. Try it out!')
+    print('Now lets try to find the transits! This time, you can type in what you think is the time of the transit, an then try to find the period by matching the other red llines to other transits. \n Try it out!')
 
     time = time[~np.isnan(flux)]
     flux = flux[~np.isnan(flux)]
@@ -254,7 +254,7 @@ def running_median(data, kernel=25):
 
 def showing_BLS_for_planet(time, flux):
 
-    print('Now, you can double heck if you found the right period! Use the code below to see if the strongest signal it finds is the same as your period and if it finds a similar transit time. If the periods are different dont worry! Just talk to me, and maybe run the last cell :)')
+    print('Now, you can double heck if you found the right period! Use the code below to see if the strongest signal it finds is the same as your period and if it finds a similar transit time. \n If the periods are different dont worry! Just talk to me, and maybe run the last cell :)')
     time_new = time[~np.isnan(flux)]
     flux_new = flux[~np.isnan(flux)]
 
@@ -385,7 +385,7 @@ def creating_transit_model_gui(time, flux, t0, per, rp_rs, a_rs, inc):
 # 1659.6
     
 def modeling_transits_gui(time, flux, t0_val, period):
-    print('Great! Now, can you try to get a model to fit the transits? Feel free to change the t0 and period, and adjust the other parameters to see how well you can fit the model to the transits. Once you do, write it down! At the end of the workshop we can look to see if it agrees with what other people get and the true parameters of the planet!')
+    print('Great! Now, can you try to get a model to fit the transits? \n Feel free to change the t0 and period, and adjust the other parameters to see how well you can fit the model to the transits. \n Once you do, write it down! At the end of the workshop we can look to see if it agrees with what other people get and the true parameters of the planet!')
 
     
     interactive_plot = interactive(creating_transit_model_gui, time = fixed(time), flux = fixed(flux),
