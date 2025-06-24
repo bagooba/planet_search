@@ -20,6 +20,7 @@ batman_package
 wotan
 transitleastsquares
 ipython
+ipympl
 ipywidgets
 numpy
 pandas
