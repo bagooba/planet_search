@@ -171,6 +171,7 @@ def create_fig_plotting_mid_transit_times(time, flux, t0_val, period = 1E3, ax =
             ax.vlines(t0_vals, ymin, ymax, lw = 1, color = 'r', zorder = -100, alpha = 0.7)
         ax.set_ylim(ymin, ymax)
         ax.set_xlim(xmin, xmax)
+        ax.grid(True, axis='x')
 
     return ax
 
