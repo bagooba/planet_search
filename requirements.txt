@@ -25,5 +25,4 @@ ipywidgets
 numpy
 pandas
 matplotlib
-jupyter 
-notebook
+nbclassic
