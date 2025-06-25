@@ -130,7 +130,7 @@ def detrending_func(time, flux, method, window_length, break_tolerance, edge_cut
     ax[0].set_ylabel('Raw flux')
     ax[1].scatter(time, flatten_lc, edgecolors='k', c='black', s=30)
     ymin, ymax = ax[1].get_ylim()
-    ax[1].set_ylim(max(ymin, 0.95), min(1.05, np.median(flatten_lc)+.5*np.std(flatten_lc)))
+    ax[1].set_ylim(max(ymin, 0.95), min(1.01, np.median(flatten_lc)+.5*np.std(flatten_lc)))
     ax[1].set_ylabel('Detrended flux')
     plt.xlabel('Time (days)')
     f.subplots_adjust(hspace=0)
