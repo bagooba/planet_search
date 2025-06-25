@@ -141,18 +141,21 @@ def detrending_func(time, flux, method, window_length, break_tolerance, edge_cut
 def playing_with_detrending_gui(time, flux):
 
     print('Can you get rid of some noise in the light curve to make the transits clearer? Try it out!')
-    y1=interactive(
-        detrending_func,
-        time =fixed(time), 
-        flux = fixed(flux),
-        method=["biweight", "hodges", "welsch", "median", "andrewsinewave", "mean", "trim_mean", "winsorize"],
-        window_length=FloatSlider(value=1.,min=0.1,  max=2., step=0.1, style = style, layout = Layout(width='1000px')),
-        break_tolerance=FloatSlider(value=0.,min=0.,  max=1., step=0.1, style = style, layout = Layout(width='1000px')),
-        edge_cutoff=FloatSlider(value=0.1 ,min=0.,  max=1., step=0.1, style = style, layout = Layout(width='1000px')),
-        cval=IntSlider(value=5 ,min=1,  max=9, step=1, style = style, layout = Layout(width='1000px')),
-        )
-    container = widgets.VBox([widgets.HBox([y1])])
-    display(container)
+    try:
+        y1=interactive(
+            detrending_func,
+            time =fixed(time), 
+            flux = fixed(flux),
+            method=["biweight", "hodges", "welsch", "median", "andrewsinewave", "mean", "trim_mean", "winsorize"],
+            window_length=FloatSlider(value=1.,min=0.1,  max=2., step=0.1, style = style, layout = Layout(width='1000px')),
+            break_tolerance=FloatSlider(value=0.,min=0.,  max=1., step=0.1, style = style, layout = Layout(width='1000px')),
+            edge_cutoff=FloatSlider(value=0.1 ,min=0.,  max=1., step=0.1, style = style, layout = Layout(width='1000px')),
+            cval=IntSlider(value=5 ,min=1,  max=9, step=1, style = style, layout = Layout(width='1000px')),
+            )
+        container = widgets.VBox([widgets.HBox([y1])])
+        display(container)
+    except:
+        print('Sorry, you still need to finish the cell above to run this!')
     return y1
     
 
